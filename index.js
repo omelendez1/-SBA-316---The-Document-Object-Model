@@ -85,3 +85,17 @@ for (let i = 0; i < cells.length; i++) {
 }
 
 resetButton.addEventListener('click', resetBoard);
+playerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const playerNameInput = document.getElementById('playerName');
+
+    if (playerNameInput.value.trim() === '') {
+        alert('Please enter a name!');
+        return;
+    }
+
+    statusMessage.textContent = `Current Player: ${playerNameInput.value}`;
+    playerForm.style.display = 'none';
+});
+
+console.log('Game loaded at:', new Date().toLocaleString());
