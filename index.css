@@ -1,41 +1,95 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f0f2f5;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
-
 h1 {
-  margin-top: 20px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
 }
-
 .box {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-gap: 5px;
-  margin: 20px auto;
-  width: 310px;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    width: 310px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid #42275a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .cell {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  border: 2px solid #333;
-  font-size: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  user-select: none;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #42275a;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
 }
-
-.box:hover {
-  background-color: #f0f0f0;
+.cell:hover {
+    background-color: #f7f9fc;
+    transform: scale(1.02);
 }
-
+.cell.x {
+    color: #e13a8e;
+}
+.cell.o {
+    color: #55b896;
+}
 #resetBtn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  cursor: pointer;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #09507c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#resetBtn:hover {
+    background-color: #2980b9;
+}
+#status {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #34495e;
+}
+form {
+    margin-bottom: 20px;
+}
+input[type="text"] {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+form button {
+    padding: 8px 15px;
+    background-color: #ebb568;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #27ae60;
+}
+h3 {
+    color: #2c3e50;
+    margin-top: 20px;
 }
